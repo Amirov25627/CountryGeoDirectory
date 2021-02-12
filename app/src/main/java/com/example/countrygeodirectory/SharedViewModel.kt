@@ -32,9 +32,9 @@ val currentData = MutableLiveData<CountryData>()
     }
 
     fun getDetailsList(){
-
+        Log.d("CN ", countryName )
         viewModelScope.launch{
-            Log.d("CN ", countryName )
+
             try{
                 val data = CountryAPI.service.detailsList(countryName)
                 detailsList.value = data

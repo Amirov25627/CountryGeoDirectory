@@ -36,7 +36,7 @@
         android:id="@+id/transparent"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scaleX="15"
+        android:scaleX="30"
         android:scaleY="10"
         android:src="@drawable/ic_coreldraw_2020_graphic"
         android:visibility="visible"
