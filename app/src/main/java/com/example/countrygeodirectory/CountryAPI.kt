@@ -8,6 +8,9 @@ import retrofit2.http.GET
 interface CountryService{
     @GET("rest/v2/all?fields=name;capital;flag;alpha3Code;subregion;demonym;population;")
     suspend fun countryList():List<CountryData>
+    
+    @GET("rest/v2/name/{countryName}?fullText=true")
+    suspend fun countryDetails(countryName: String): DetailsData
 }
 
 val retrofit = Retrofit.Builder()
