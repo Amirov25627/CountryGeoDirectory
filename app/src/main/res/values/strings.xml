@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CountryGeoDirectory</string>
+    <string name="capital">Capital</string>
+    <string name="subregion">Subregion</string>
+    <string name="demonim">Demonim</string>
+    <string name="population">Population</string>
+    <string name="currency">Currency</string>
+    <string name="language">Language</string>
+</resources>

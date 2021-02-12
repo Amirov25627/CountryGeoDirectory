@@ -1,0 +1,10 @@
+com/example/countrygeodirectory/BuildConfig.java
+ com.example.countrygeodirectory.BuildConfig
+com/example/countrygeodirectory/databinding/CountryListFragmentBinding.java
+ com.example.countrygeodirectory.databinding.CountryListFragmentBinding
+com/example/countrygeodirectory/databinding/CountryItemBinding.java
+ com.example.countrygeodirectory.databinding.CountryItemBinding
+com/example/countrygeodirectory/databinding/CountryDetailsBinding.java
+ com.example.countrygeodirectory.databinding.CountryDetailsBinding
+com/example/countrygeodirectory/databinding/ActivityMainBinding.java
+ com.example.countrygeodirectory.databinding.ActivityMainBinding

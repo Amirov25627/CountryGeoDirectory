@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.google.android.material.card.MaterialCardView
+    android:layout_width="0dp"
+    android:layout_height="80dp"
+    android:layout_margin="1dp"
+    android:elevation="16dp"
+    android:id="@+id/card"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintTop_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/back_flag"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:scaleX="1"
+        android:scaleY="1"
+        tools:src="@drawable/ic_afg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="15"
+        android:scaleY="10"
+        android:src="@drawable/ic_coreldraw_2020_graphic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/flag_icon"
+        tools:src="@drawable/ic_flag"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="24dp"
+        />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/country_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintLeft_toRightOf="@id/flag_icon"
+        tools:text="COUNTRY"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/country_capital"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="24dp"
+        tools:text="CAPITAL"
+        android:gravity="end"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
