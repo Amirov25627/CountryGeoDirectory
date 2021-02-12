@@ -19,6 +19,7 @@ val currentData = MutableLiveData<CountryData>()
 
     fun getCountryList(){
         viewModelScope.launch{
+
             try{
                 val list = CountryAPI.service.countryList()
                 countryList.value = list
@@ -31,12 +32,14 @@ val currentData = MutableLiveData<CountryData>()
     }
 
     fun getDetailsList(){
+
         viewModelScope.launch{
+            Log.d("CN ", countryName )
             try{
-                val data = DetailsAPI.service.detailsList()
+                val data = CountryAPI.service.detailsList(countryName)
                 detailsList.value = data
             } catch (e:Exception){
-                Log.e("SRV, ${countryName}", e.toString())
+                Log.e("SRV, $countryName", e.toString())
                 detailsList.value = null
             }
         }

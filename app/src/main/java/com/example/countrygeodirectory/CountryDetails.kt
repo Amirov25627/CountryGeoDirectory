@@ -2,6 +2,7 @@ package com.example.countrygeodirectory
 
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +12,7 @@ import androidx.lifecycle.Observer
 import com.example.countrygeodirectory.databinding.CountryDetailsBinding
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou
 
-lateinit var countryName : String
+var countryName : String = ""
 
 class CountryDetails:Fragment() {
     private lateinit var binding: CountryDetailsBinding
@@ -24,6 +25,7 @@ class CountryDetails:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         sharedViewModel.getDetailsList()
         sharedViewModel.currentData.observe(viewLifecycleOwner, Observer {
             if(it==null) return@Observer
