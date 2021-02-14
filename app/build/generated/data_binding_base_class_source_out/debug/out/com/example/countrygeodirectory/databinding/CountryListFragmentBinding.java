@@ -4,6 +4,8 @@ package com.example.countrygeodirectory.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -19,12 +21,24 @@ public final class CountryListFragmentBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final View filBack;
+
+  @NonNull
+  public final EditText filEditText;
+
+  @NonNull
   public final RecyclerView listRV;
 
-  private CountryListFragmentBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView listRV) {
+  @NonNull
+  public final ImageView statusIV;
+
+  private CountryListFragmentBinding(@NonNull ConstraintLayout rootView, @NonNull View filBack,
+      @NonNull EditText filEditText, @NonNull RecyclerView listRV, @NonNull ImageView statusIV) {
     this.rootView = rootView;
+    this.filBack = filBack;
+    this.filEditText = filEditText;
     this.listRV = listRV;
+    this.statusIV = statusIV;
   }
 
   @Override
@@ -54,13 +68,32 @@ public final class CountryListFragmentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.fil_back;
+      View filBack = rootView.findViewById(id);
+      if (filBack == null) {
+        break missingId;
+      }
+
+      id = R.id.fil_edit_text;
+      EditText filEditText = rootView.findViewById(id);
+      if (filEditText == null) {
+        break missingId;
+      }
+
       id = R.id.listRV;
       RecyclerView listRV = rootView.findViewById(id);
       if (listRV == null) {
         break missingId;
       }
 
-      return new CountryListFragmentBinding((ConstraintLayout) rootView, listRV);
+      id = R.id.statusIV;
+      ImageView statusIV = rootView.findViewById(id);
+      if (statusIV == null) {
+        break missingId;
+      }
+
+      return new CountryListFragmentBinding((ConstraintLayout) rootView, filBack, filEditText,
+          listRV, statusIV);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

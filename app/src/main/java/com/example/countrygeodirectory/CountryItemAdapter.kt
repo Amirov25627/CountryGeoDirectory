@@ -38,17 +38,17 @@ class CountryViewHolder(private val binding: CountryItemBinding, private val vie
         binding.countryName.text = data.name
         binding.countryCapital.text = data.capital
 
-        val uri = Uri.parse("https://restcountries.eu/data/${data.alpha3Code.toLowerCase()}.svg")
+        val uri = Uri.parse(data.flag)
        GlideToVectorYou
                .init()
                .with(binding.root.context)
-               //.setPlaceHolder(placeholderLoading, placeholderError)
+               .setPlaceHolder(R.drawable.loading_animation, R.drawable.ic_broken_image)
                .load(uri, binding.flagIcon)
 
         GlideToVectorYou
                 .init()
                 .with(binding.root.context)
-                //.setPlaceHolder(placeholderLoading, placeholderError)
+                .setPlaceHolder(R.drawable.loading_animation, R.drawable.ic_broken_image)
                 .load(uri, binding.backFlag)
 
         binding.root.setOnClickListener{

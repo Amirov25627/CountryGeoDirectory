@@ -6,9 +6,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/light_grey">
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
+
         >
 
      <ImageView
@@ -19,7 +23,7 @@
          app:layout_constraintTop_toTopOf="parent"
          app:layout_constraintLeft_toLeftOf="parent"
          app:layout_constraintRight_toRightOf="parent"
-         android:src="@drawable/ic_falg_ex"
+         tools:src="@drawable/ic_falg_ex"
          />
 
         <TextView
@@ -32,6 +36,7 @@
             tools:text="KAZAKHSTAN"
             android:textSize="@dimen/main_text_size"
             android:textStyle="bold"
+            android:gravity="center"
             android:textAllCaps="true"
             />
 
@@ -87,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/language_txt"
-            app:layout_constraintTop_toBottomOf="@id/population_txt"
+            app:layout_constraintTop_toBottomOf="@id/population"
             app:layout_constraintLeft_toLeftOf="parent"
             android:text="@string/language"
             android:textSize="@dimen/text_size"
@@ -99,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/currency_txt"
-            app:layout_constraintTop_toBottomOf="@id/language_txt"
+            app:layout_constraintTop_toBottomOf="@id/language"
             app:layout_constraintLeft_toLeftOf="parent"
             android:text="@string/currency"
             android:textSize="@dimen/text_size"
@@ -118,6 +123,8 @@
             android:gravity="end"
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
             />
 
         <TextView
@@ -131,6 +138,8 @@
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:gravity="end"
+            android:clickable="true"
+            android:focusable="true"
             />
 
         <TextView
@@ -157,6 +166,7 @@
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:gravity="end"
+
             />
 
         <TextView
@@ -196,6 +206,7 @@
             android:textSize="@dimen/text_size"
             android:gravity="end"
             android:textStyle="bold"
+
             />
 
 

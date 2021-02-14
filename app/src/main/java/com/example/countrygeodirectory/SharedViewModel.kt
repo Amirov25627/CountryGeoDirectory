@@ -2,29 +2,33 @@ package com.example.countrygeodirectory
 
 import android.net.Uri
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou
 import kotlinx.coroutines.launch
 
 class SharedViewModel:ViewModel() {
 val countryList = MutableLiveData<List<CountryData>>()
-val detailsList = MutableLiveData<DetailsData>()
+val detailsList = MutableLiveData<List<DetailsData>>()
 val goToDetailsLV = MutableLiveData<Boolean>()
-val currentData = MutableLiveData<CountryData>()
+private val currentData = MutableLiveData<CountryData>()
+private var countryName = ""
+val status = MutableLiveData<STATUS>()
+var showTextWin = MutableLiveData<WINDOW>()
 
 
 
     fun getCountryList(){
         viewModelScope.launch{
-
+        status.value = STATUS.LOADING
+        showTextWin.value = WINDOW.HIDE
             try{
                 val list = CountryAPI.service.countryList()
                 countryList.value = list
+                status.value = STATUS.SUCCESS
             } catch (e:Exception){
                 countryList.value = null
+                status.value = STATUS.ERROR
             }
 
         }
@@ -32,15 +36,16 @@ val currentData = MutableLiveData<CountryData>()
     }
 
     fun getDetailsList(){
-        Log.d("CN ", countryName )
-        viewModelScope.launch{
 
+        viewModelScope.launch{
+            Log.d("CN ", countryName )
             try{
-                val data = CountryAPI.service.detailsList(countryName)
-                detailsList.value = data
+                val list = CountryAPI.service.detailsList(countryName)
+                detailsList.value = list
+                Log.d("LIST ", list.toString() )
             } catch (e:Exception){
-                Log.e("SRV, $countryName", e.toString())
                 detailsList.value = null
+                Log.d("ERROR ", e.toString() )
             }
         }
     }
@@ -49,13 +54,47 @@ val currentData = MutableLiveData<CountryData>()
 fun goToDetails(data: CountryData){
     goToDetailsLV.value = true
     currentData.value = data
+    countryName = currentData.value?.name.toString()
+
 
 }
 
     fun setBackable(){
+
         goToDetailsLV.value = false
+
     }
+
+
+    enum class STATUS{
+        LOADING,
+        ERROR,
+        SUCCESS
+    }
+
+
+    enum class WINDOW{
+        SHOW,
+        HIDE
+    }
+
+    fun showEditTextWindow(){
+        showTextWin.value = WINDOW.SHOW
+     }
+
+    fun hideEditTextWindow(){
+        showTextWin.value = WINDOW.HIDE
+    }
+
+//    fun filterByText(text: String){
+//        val filteredCountryList = countryList.value.
+//        Log.d("filteredCountryList", filteredCountryList.toString())
+//    }
+
+
 }
+
+
 
 
 

@@ -1587,6 +1587,8 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_afg
+drawable ic_broken_image
+drawable ic_connection_error
 drawable ic_coreldraw_2020_graphic
 drawable ic_falg_ex
 drawable ic_falg_example
@@ -1598,6 +1600,9 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_search
+drawable loading_animation
+drawable loading_img
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
 drawable material_ic_edit_black_24dp
@@ -1797,6 +1802,8 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id fil_back
+id fil_edit_text
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1936,6 +1943,7 @@ id search_button
 id search_close_btn
 id search_edit_frame
 id search_go_btn
+id search_layout
 id search_mag_icon
 id search_plate
 id search_src_text
@@ -1969,6 +1977,7 @@ id startHorizontal
 id startVertical
 id staticLayout
 id staticPostLayout
+id statusIV
 id stop
 id stretch
 id submenuarrow
@@ -2165,6 +2174,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu menu_layout
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
@@ -2261,6 +2271,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string population
+string search
 string search_menu_title
 string status_bar_notification_info_overflow
 string subregion

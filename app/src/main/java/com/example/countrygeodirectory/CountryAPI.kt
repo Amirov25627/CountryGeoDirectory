@@ -9,11 +9,11 @@ import retrofit2.http.Path
 
 interface CountryService{
 
-    @GET("rest/v2/all?fields=name;capital;flag;alpha3Code;subregion;demonym;population;")
+    @GET("rest/v2/all?fields=name;capital;flag")
     suspend fun countryList():List<CountryData>
 
     @GET("rest/v2/name/{countryName}?fullText=true")
-    suspend fun detailsList(@Path("countryName") name: String): DetailsData
+    suspend fun detailsList(@Path("countryName") name: String): List<DetailsData>
 
 
 }
