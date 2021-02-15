@@ -86,10 +86,11 @@ fun goToDetails(data: CountryData){
         showTextWin.value = WINDOW.HIDE
     }
 
-//    fun filterByText(text: String){
-//        val filteredCountryList = countryList.value.
-//        Log.d("filteredCountryList", filteredCountryList.toString())
-//    }
+fun filterByText(text: String){
+        val filteredCountryList = countryList.value?.take(5)
+    Log.d("text", text)
+        Log.d("filteredCountryList", filteredCountryList.toString())
+    }
 
 
 }

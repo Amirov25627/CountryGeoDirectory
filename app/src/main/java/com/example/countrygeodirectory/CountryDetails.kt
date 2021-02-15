@@ -46,7 +46,6 @@ class CountryDetails:Fragment() {
         binding.countryNameBig.text = data.name
         binding.subregion.text = data.subregion
         binding.demonim.text = data.demonym
-        //binding.population.text = data.population.toString()
         binding.population.text = NumberFormat.getNumberInstance().format(data.population)
         binding.language.text = data.languages.first().name
         binding.currency.text = data.currencies.first().name

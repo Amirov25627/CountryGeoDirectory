@@ -27,10 +27,10 @@ class CountryListFragment:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        binding.filEditText.doOnTextChanged { text,_, _, _ ->
-//            val enteredText = text.toString()
-//            sharedViewModel.filterByText(enteredText)
-//        }
+        binding.filEditText.doOnTextChanged { text,_, _, _ ->
+            val enteredText = text.toString()
+            sharedViewModel.filterByText(enteredText)
+        }
 
         adapter = CountryItemAdapter(sharedViewModel)
         binding.listRV.adapter = adapter
