@@ -15,7 +15,7 @@ private val currentData = MutableLiveData<CountryData>()
 private var countryName = ""
 val status = MutableLiveData<STATUS>()
 var showTextWin = MutableLiveData<WINDOW>()
-
+var filteredCountryList = MutableLiveData<List<CountryData>>()
 
 
     fun getCountryList(){
@@ -87,10 +87,8 @@ fun goToDetails(data: CountryData){
     }
 
 fun filterByText(text: String){
-        val filteredCountryList = countryList.value?.take(5)
-    Log.d("text", text)
-        Log.d("filteredCountryList", filteredCountryList.toString())
-    }
+        filteredCountryList.value = countryList.value?.filter { it.name.startsWith(text, true) }
+        }
 
 
 }

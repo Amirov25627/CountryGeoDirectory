@@ -35,6 +35,10 @@ class MainActivity : AppCompatActivity() {
             } else {
                 showed = false
                 viewModel.hideEditTextWindow()
+                viewModel.getCountryList()
+
+
+
 
             }
         }

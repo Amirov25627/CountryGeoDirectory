@@ -45,6 +45,11 @@ class CountryListFragment:Fragment() {
             showList(it)
         })
 
+        sharedViewModel.filteredCountryList.observe(viewLifecycleOwner, Observer {
+            if (it == null) return@Observer
+            showList(it)
+        })
+
         sharedViewModel.showTextWin.observe(viewLifecycleOwner, Observer {
             if (it == SharedViewModel.WINDOW.SHOW) {showWindow()}
             if (it == SharedViewModel.WINDOW.HIDE) {hideWindow()}
