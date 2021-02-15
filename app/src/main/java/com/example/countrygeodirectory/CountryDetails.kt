@@ -101,11 +101,17 @@ class CountryDetails:Fragment() {
             val searchIntent = Intent(Intent.ACTION_VIEW)
             searchIntent.data = capitalUri
             binding.root.context.startActivity(searchIntent)
+
+
         }
+
+        binding.currencySymbol.setOnClickListener {
+            val capitalUri = Uri.parse("https://en.wikipedia.org/wiki/${data.currencies.first().name}")
+            val searchIntent = Intent(Intent.ACTION_VIEW)
+            searchIntent.data = capitalUri
+            binding.root.context.startActivity(searchIntent)
     }
-
-
-
+  }
 }
 
 

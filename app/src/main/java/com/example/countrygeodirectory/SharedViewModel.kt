@@ -55,6 +55,7 @@ fun goToDetails(data: CountryData){
     goToDetailsLV.value = true
     currentData.value = data
     countryName = currentData.value?.name.toString()
+    
 
 
 }

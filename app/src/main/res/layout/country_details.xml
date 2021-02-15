@@ -11,9 +11,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-
+        android:paddingBottom="40dp"
         >
+
+       <androidx.constraintlayout.widget.Guideline
+           android:id="@+id/guideline"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           app:layout_constraintGuide_begin="205dp" />
 
      <ImageView
          android:layout_width="350dp"
@@ -23,22 +29,22 @@
          app:layout_constraintTop_toTopOf="parent"
          app:layout_constraintLeft_toLeftOf="parent"
          app:layout_constraintRight_toRightOf="parent"
-         tools:src="@drawable/ic_falg_ex"
+         android:src="@drawable/ic_broken_image"
          />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/country_name_big"
-            app:layout_constraintTop_toBottomOf="@id/flag_icon_big"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            tools:text="KAZAKHSTAN"
-            android:textSize="@dimen/main_text_size"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textAllCaps="true"
-            />
+       <TextView
+           android:id="@+id/country_name_big"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:clickable="true"
+           android:gravity="center"
+           android:textAllCaps="true"
+           android:textSize="@dimen/main_text_size"
+           android:textStyle="bold"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/flag_icon_big"
+           android:text="@string/loading..." />
 
         <TextView
             android:layout_width="wrap_content"
@@ -117,9 +123,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/capital"
             app:layout_constraintTop_toTopOf="@id/capital_txt"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
             android:layout_marginRight="@dimen/margin_horizontal"
-            tools:text="Capitasdfsdfl"
+            android:text="@string/loading..."
             android:gravity="end"
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
@@ -132,9 +139,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/subregion"
             app:layout_constraintTop_toTopOf="@id/subregion_txt"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
             android:layout_marginRight="@dimen/margin_horizontal"
-            tools:text="Eurasia"
+            android:text="@string/loading..."
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:gravity="end"
@@ -147,9 +155,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/demonim"
             app:layout_constraintTop_toTopOf="@id/demonim_txt"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
             android:layout_marginRight="@dimen/margin_horizontal"
-            tools:text="Kazakh"
+            android:text="@string/loading..."
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:gravity="end"
@@ -160,9 +169,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/population"
             app:layout_constraintTop_toTopOf="@id/population_txt"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
             android:layout_marginRight="@dimen/margin_horizontal"
-            tools:text="17 000 000"
+            android:text="@string/loading..."
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:gravity="end"
@@ -174,9 +184,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/language"
             app:layout_constraintTop_toTopOf="@id/language_txt"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
             android:layout_marginRight="@dimen/margin_horizontal"
-            tools:text="Kazakh"
+            android:text="@string/loading..."
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:gravity="end"
@@ -189,25 +200,24 @@
             app:layout_constraintTop_toTopOf="@id/currency_txt"
             app:layout_constraintRight_toLeftOf="@id/currency"
             android:layout_marginRight="8dp"
-            tools:text="T"
+            tools:text="@string/loading..."
             android:textSize="@dimen/text_size"
             android:textStyle="bold"
             android:gravity="end"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/currency"
-            app:layout_constraintTop_toTopOf="@id/currency_txt"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="@dimen/margin_horizontal"
-            tools:text="tenge"
-            android:textSize="@dimen/text_size"
-            android:gravity="end"
-            android:textStyle="bold"
-
-            />
+       <TextView
+           android:id="@+id/currency"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="@dimen/margin_horizontal"
+           android:gravity="end"
+           android:textSize="@dimen/text_size"
+           android:textStyle="bold"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintLeft_toRightOf="@+id/guideline"
+           app:layout_constraintTop_toTopOf="@id/currency_txt"
+           android:text="@string/loading..." />
 
 
 

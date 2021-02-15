@@ -97,6 +97,7 @@ class CountryListFragment:Fragment() {
     private fun hideWindow(){
         binding.filBack.visibility = View.GONE
         binding.filEditText.visibility = View.GONE
+
     }
     
 
