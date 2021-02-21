@@ -9,13 +9,21 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.countrygeodirectory.databinding.ActivityMainBinding
 import com.example.countrygeodirectory.databinding.CountryListFragmentBinding
 
 class CountryListFragment:Fragment() {
     private lateinit var binding: CountryListFragmentBinding
-    private val sharedViewModel by activityViewModels<SharedViewModel>()
+    private val sharedViewModel:SharedViewModel by lazy{
+val activity = requireNotNull(this.activity){
+    "You can only access the viewModel after onActivityCreated()"
+}
+        ViewModelProvider(this, Factory(activity.application)).get(SharedViewModel::class.java)
+    }
+
+
     lateinit var adapter: CountryItemAdapter
 
 

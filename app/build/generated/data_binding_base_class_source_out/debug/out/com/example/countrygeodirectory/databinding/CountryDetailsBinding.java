@@ -9,6 +9,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
 import com.example.countrygeodirectory.R;
 import java.lang.NullPointerException;
@@ -47,6 +48,9 @@ public final class CountryDetailsBinding implements ViewBinding {
   public final ImageView flagIconBig;
 
   @NonNull
+  public final Guideline guideline;
+
+  @NonNull
   public final TextView language;
 
   @NonNull
@@ -67,9 +71,10 @@ public final class CountryDetailsBinding implements ViewBinding {
   private CountryDetailsBinding(@NonNull ScrollView rootView, @NonNull TextView capital,
       @NonNull TextView capitalTxt, @NonNull TextView countryNameBig, @NonNull TextView currency,
       @NonNull TextView currencySymbol, @NonNull TextView currencyTxt, @NonNull TextView demonim,
-      @NonNull TextView demonimTxt, @NonNull ImageView flagIconBig, @NonNull TextView language,
-      @NonNull TextView languageTxt, @NonNull TextView population, @NonNull TextView populationTxt,
-      @NonNull TextView subregion, @NonNull TextView subregionTxt) {
+      @NonNull TextView demonimTxt, @NonNull ImageView flagIconBig, @NonNull Guideline guideline,
+      @NonNull TextView language, @NonNull TextView languageTxt, @NonNull TextView population,
+      @NonNull TextView populationTxt, @NonNull TextView subregion,
+      @NonNull TextView subregionTxt) {
     this.rootView = rootView;
     this.capital = capital;
     this.capitalTxt = capitalTxt;
@@ -80,6 +85,7 @@ public final class CountryDetailsBinding implements ViewBinding {
     this.demonim = demonim;
     this.demonimTxt = demonimTxt;
     this.flagIconBig = flagIconBig;
+    this.guideline = guideline;
     this.language = language;
     this.languageTxt = languageTxt;
     this.population = population;
@@ -169,6 +175,12 @@ public final class CountryDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.guideline;
+      Guideline guideline = rootView.findViewById(id);
+      if (guideline == null) {
+        break missingId;
+      }
+
       id = R.id.language;
       TextView language = rootView.findViewById(id);
       if (language == null) {
@@ -206,8 +218,8 @@ public final class CountryDetailsBinding implements ViewBinding {
       }
 
       return new CountryDetailsBinding((ScrollView) rootView, capital, capitalTxt, countryNameBig,
-          currency, currencySymbol, currencyTxt, demonim, demonimTxt, flagIconBig, language,
-          languageTxt, population, populationTxt, subregion, subregionTxt);
+          currency, currencySymbol, currencyTxt, demonim, demonimTxt, flagIconBig, guideline,
+          language, languageTxt, population, populationTxt, subregion, subregionTxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

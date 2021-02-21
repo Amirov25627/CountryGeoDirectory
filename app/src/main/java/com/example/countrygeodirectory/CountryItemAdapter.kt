@@ -8,7 +8,7 @@ import com.example.countrygeodirectory.databinding.CountryItemBinding
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou
 
 class CountryItemAdapter(private val viewModel: SharedViewModel) : RecyclerView.Adapter<CountryViewHolder>() {
-    val mList = mutableListOf<CountryData>()
+    private val mList = mutableListOf<CountryData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
         val inflater = LayoutInflater.from(parent.context)

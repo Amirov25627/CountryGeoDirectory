@@ -55,6 +55,13 @@
 34-->C:\Users\user\AndroidStudioProjects\CountryGeoDirectory\app\src\main\AndroidManifest.xml:17:27-74
 35            </intent-filter>
 36        </activity>
-37    </application>
-38
-39</manifest>
+37
+38        <service
+38-->[androidx.room:room-runtime:2.2.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f181fc76c988d80e24c432baee6db310\room-runtime-2.2.4\AndroidManifest.xml:25:9-27:40
+39            android:name="androidx.room.MultiInstanceInvalidationService"
+39-->[androidx.room:room-runtime:2.2.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f181fc76c988d80e24c432baee6db310\room-runtime-2.2.4\AndroidManifest.xml:26:13-74
+40            android:exported="false" />
+40-->[androidx.room:room-runtime:2.2.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f181fc76c988d80e24c432baee6db310\room-runtime-2.2.4\AndroidManifest.xml:27:13-37
+41    </application>
+42
+43</manifest>

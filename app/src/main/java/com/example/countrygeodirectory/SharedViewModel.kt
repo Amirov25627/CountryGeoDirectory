@@ -1,13 +1,17 @@
 package com.example.countrygeodirectory
 
-import android.net.Uri
+import android.app.Application
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.example.countrygeodirectory.database.getDatabase
+import com.example.countrygeodirectory.repository.CountriesRepository
 import kotlinx.coroutines.launch
 
-class SharedViewModel:ViewModel() {
+class SharedViewModel(app: Application) :ViewModel() {
+private var countriesRepository = CountriesRepository(getDatabase(app))
 val countryList = MutableLiveData<List<CountryData>>()
 val detailsList = MutableLiveData<List<DetailsData>>()
 val goToDetailsLV = MutableLiveData<Boolean>()
@@ -23,8 +27,9 @@ var filteredCountryList = MutableLiveData<List<CountryData>>()
         status.value = STATUS.LOADING
         showTextWin.value = WINDOW.HIDE
             try{
-                val list = CountryAPI.service.countryList()
-                countryList.value = list
+                //val list = CountryAPI.service.countryList()
+                //countryList.value = list
+                countryList.value = countriesRepository.countries.value
                 status.value = STATUS.SUCCESS
             } catch (e:Exception){
                 countryList.value = null
@@ -92,6 +97,17 @@ fun filterByText(text: String){
         }
 
 
+
+}
+
+class Factory(val app: Application) : ViewModelProvider.Factory {
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(SharedViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return SharedViewModel(app) as T
+        }
+        throw IllegalArgumentException("Unable to construct viewmodel")
+    }
 }
 
 
