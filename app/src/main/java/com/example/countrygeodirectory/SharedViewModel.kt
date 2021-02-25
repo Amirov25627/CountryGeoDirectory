@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class SharedViewModel(app: Application) :ViewModel() {
 private var countriesRepository = CountriesRepository(getDatabase(app))
-val countryList = MutableLiveData<List<CountryData>>()
+val countryList = countriesRepository.countries
 val detailsList = MutableLiveData<List<DetailsData>>()
 val goToDetailsLV = MutableLiveData<Boolean>()
 private val currentData = MutableLiveData<CountryData>()
@@ -29,11 +29,13 @@ var filteredCountryList = MutableLiveData<List<CountryData>>()
             try{
                 //val list = CountryAPI.service.countryList()
                 //countryList.value = list
-                countryList.value = countriesRepository.countries.value
+                countriesRepository.refreshCountries()
                 status.value = STATUS.SUCCESS
             } catch (e:Exception){
-                countryList.value = null
+                if(countryList.value.isNullOrEmpty())
                 status.value = STATUS.ERROR
+                else
+                    status.value = STATUS.SUCCESS
             }
 
         }
@@ -42,15 +44,16 @@ var filteredCountryList = MutableLiveData<List<CountryData>>()
 
     fun getDetailsList(){
 
+        Log.d("GD", countryName )
+
         viewModelScope.launch{
-            Log.d("CN ", countryName )
             try{
                 val list = CountryAPI.service.detailsList(countryName)
                 detailsList.value = list
                 Log.d("LIST ", list.toString() )
             } catch (e:Exception){
                 detailsList.value = null
-                Log.d("ERROR ", e.toString() )
+                Log.d("ER ", countryName )
             }
         }
     }
@@ -60,6 +63,8 @@ fun goToDetails(data: CountryData){
     goToDetailsLV.value = true
     currentData.value = data
     countryName = currentData.value?.name.toString()
+
+
     
 
 

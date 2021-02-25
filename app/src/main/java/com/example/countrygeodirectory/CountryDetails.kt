@@ -27,16 +27,21 @@ class CountryDetails:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
         sharedViewModel.getDetailsList()
 
-
+        Log.d("CREATED", context.toString() )
         sharedViewModel.detailsList.observe(viewLifecycleOwner, Observer {
             if (it==null) return@Observer
-
             showDetails(it.first())
+
         })
-
-
     }
 
 

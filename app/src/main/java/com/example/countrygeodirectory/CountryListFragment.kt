@@ -66,7 +66,6 @@ val activity = requireNotNull(this.activity){
         sharedViewModel.goToDetailsLV.observe(viewLifecycleOwner, Observer {
             if (it) {
                 sharedViewModel.setBackable()
-
                 findNavController().navigate(R.id.action_countryListFragment_to_countryDetails)
             }
         })

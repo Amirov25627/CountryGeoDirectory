@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        viewModel = ViewModelProvider(this).get(SharedViewModel ::class.java)
+        val factory = Factory(application)
+        viewModel = ViewModelProvider(this, factory).get(SharedViewModel ::class.java)
     }
 
     var showed = false

@@ -36,6 +36,10 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loading_animation.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\drawable\\loading_animation.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\res\\merged\\debug\\layout_country_details.xml.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\layout\\country_details.xml"
     },
@@ -44,24 +48,20 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_afg.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loading_animation.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\drawable\\loading_animation.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_broken_image.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\drawable\\ic_broken_image.xml"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_afg.xml.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_afg.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_broken_image.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\drawable\\ic_broken_image.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_afg.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_afg.png"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_afg.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_afg.png"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
