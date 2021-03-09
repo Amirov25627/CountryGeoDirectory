@@ -1,12 +1,10 @@
 package com.example.countrygeodirectory.repository
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
-import com.example.countrygeodirectory.CountryAPI
-import com.example.countrygeodirectory.CountryData
-import com.example.countrygeodirectory.CountryService
-import com.example.countrygeodirectory.asDatabaseModel
+import com.example.countrygeodirectory.network.CountryAPI
+import com.example.countrygeodirectory.database.CountryData
+import com.example.countrygeodirectory.database.asDatabaseModel
 import com.example.countrygeodirectory.database.CountriesDatabase
 import com.example.countrygeodirectory.database.asDomainModel
 import kotlinx.coroutines.Dispatchers

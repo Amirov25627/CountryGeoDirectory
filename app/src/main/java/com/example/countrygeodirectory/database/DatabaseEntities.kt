@@ -2,7 +2,6 @@ package com.example.countrygeodirectory.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.countrygeodirectory.CountryData
 
 @Entity
 data class DatabaseCountry constructor(
@@ -16,9 +15,9 @@ data class DatabaseCountry constructor(
 fun List<DatabaseCountry>.asDomainModel(): List<CountryData> {
     return map {
         CountryData(
-            name = it.name,
-            capital = it.capital,
-            flag = it.flag)
+                name = it.name,
+                capital = it.capital,
+                flag = it.flag)
     }
 }
 

@@ -6,7 +6,7 @@
     app:startDestination="@id/countryListFragment">
     <fragment
         android:id="@+id/countryListFragment"
-        android:name="com.example.countrygeodirectory.CountryListFragment"
+        android:name="com.example.countrygeodirectory.fragments.CountryListFragment"
         android:label="CountryListFragment" >
         <action
             android:id="@+id/action_countryListFragment_to_countryDetails"
@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/countryDetails"
-        android:name="com.example.countrygeodirectory.CountryDetails"
+        android:name="com.example.countrygeodirectory.fragments.CountryDetails"
         android:label="CountryDetails" />
 </navigation>
