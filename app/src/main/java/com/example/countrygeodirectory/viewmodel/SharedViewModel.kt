@@ -13,6 +13,7 @@ import com.example.countrygeodirectory.network.CountryAPI
 import com.example.countrygeodirectory.repository.CountriesRepository
 import kotlinx.coroutines.launch
 
+
 class SharedViewModel(app: Application) :ViewModel() {
 private var countriesRepository = CountriesRepository(getDatabase(app))
 val countryList = countriesRepository.countries
@@ -37,13 +38,15 @@ var filteredCountryList = MutableLiveData<List<CountryData>>()
             } catch (e:Exception){
                 if(countryList.value.isNullOrEmpty())
                 status.value = STATUS.ERROR
-                else
+                else {
                     status.value = STATUS.SUCCESS
+                }
             }
 
         }
 
     }
+
 
     fun getDetailsList(){
 
@@ -87,6 +90,7 @@ fun goToDetails(data: CountryData){
     }
 
 
+    //search
     enum class WINDOW{
         SHOW,
         HIDE

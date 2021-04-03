@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\country_details.xml",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\layout\\country_details.xml"
+        "merged": "C:\\Users\\UserPC\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\UserPC\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\UserPC\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\country_item.xml",
+        "source": "C:\\Users\\UserPC\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\layout\\country_item.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\country_item.xml",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\layout\\country_item.xml"
+        "merged": "C:\\Users\\UserPC\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\country_list_fragment.xml",
+        "source": "C:\\Users\\UserPC\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\layout\\country_list_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\country_list_fragment.xml",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\layout\\country_list_fragment.xml"
+        "merged": "C:\\Users\\UserPC\\AndroidStudioProjects\\CountryGeoDirectory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\country_details.xml",
+        "source": "C:\\Users\\UserPC\\AndroidStudioProjects\\CountryGeoDirectory\\app\\src\\main\\res\\layout\\country_details.xml"
     }
 ]
